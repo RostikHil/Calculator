@@ -1,0 +1,135 @@
+.calc {
+   font-family: Helvetica, sans-serif;
+
+    margin:50px 50%;
+    transform: translateX(-50%);
+
+
+    width: 300px;
+    height: 600px;
+    /* border: 1px solid #000; */
+    border-radius: 30px;
+    background: #000;
+    color:#fff;
+    padding: 18px;
+    box-shadow: 4px 4px 4px #4f4f4f;
+
+    position: relative;
+}
+
+.calc-screen {
+    height: 170px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.calc-screen p {
+    text-align: right;
+    font-size: 4rem;
+    margin: 0;
+    
+}
+
+.buttons {
+    display: grid;
+    grid-template-areas: 
+    "ac plus-minus percent division"
+    "seven eight nine multiply"
+    "four five six minus"
+    "one two three plus"
+    "zero zero dot equal";
+    grid-gap: 7px;
+    justify-items: center;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 65px;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+    /* transition: filter .3s; */
+}
+
+.zero p {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+.btn.zero{
+    grid-area: zero;
+    width: 140px;
+    border-radius: 34px;
+}
+
+.btn:hover {
+    filter: brightness(120%)
+}
+
+.btn:active {
+    filter: brightness(100%)
+}
+
+.btn.bg-grey {
+background: #a6a6a6;
+}
+
+.btn.bg-orange {
+    background: #ff9501;
+    
+    }
+    
+    
+/* First line */
+.ac p {
+    margin-top: 0px;
+    color: black;
+    /* font-weight: 400; */
+}
+
+.plus-minus p {
+    margin-top: 0px;
+    color: black;
+    /* font-weight: 600; */
+
+}
+
+.percent p {
+    margin-top: 0px;
+    color: black;
+}
+
+/* .division, .multiply, .minus, .plus, .equal {
+    font-weight: 600;
+} */
+
+/* top */
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.clock {
+    font-family: Helvetica, sans-serif;
+}
+
+/* under line */
+.bottom {
+    width: 150px;
+    height: 5px;
+    background: white;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
